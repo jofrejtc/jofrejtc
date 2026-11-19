@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pediatric RAG Assistant - integration template</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f5f7fa;
+      color: #182638;
+      font-family: Inter, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    main {
+      max-width: 760px;
+      margin: 70px auto;
+      padding: 0 24px;
+    }
+    h1 { line-height: 1.15; font-size: clamp(2rem, 6vw, 3.2rem); }
+    h2 { font-size: 1.25rem; margin-top: 2.2rem; }
+    a { color: #145ba1; }
+    code { background: #e5ebf2; padding: 2px 5px; border-radius: 3px; }
+    #widget-status {
+      padding: 18px 0;
+      border-top: 1px solid #cad4df;
+      border-bottom: 1px solid #cad4df;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Pediatric RAG Assistant</h1>
+    <p>Academic prototype by Jofre Tura Centelles, built with Capacity Console.</p>
+    <p>This template demonstrates the web-widget integration. The project explores a
+      dedicated knowledge base, guided questions and answers generated from retrieved information.</p>
+    <p>The assistant is an educational information prototype. Clinical validation remains outstanding.</p>
+    <h2>Connect your concierge</h2>
+    <p>Set <code>conciergeToken</code> in this file to the widget token for your own
+      dedicated public-facing Capacity concierge, then reopen the page.</p>
+    <p id="widget-status" role="status">Integration awaiting configuration.</p>
+    <p>The widget token identifies a browser integration and is visible to page visitors.
+      Use a concierge whose knowledge-base access is configured for its intended public audience.</p>
+    <p><a href="../README.md">Project overview</a> ·
+      <a href="../docs/evaluation.md">Evaluation and evidence</a></p>
+  </main>
+  <script>
+    const conciergeToken = "";
+    const status = document.getElementById("widget-status");
+
+    if (conciergeToken) {
+      const script = document.createElement("script");
+      script.defer = true;
+      script.id = "capacity-concierge-v2-script";
+      script.src = "https://cdn.capacity.com/concierge/v2/" +
+        encodeURIComponent(conciergeToken) + "/concierge.js";
+      script.setAttribute("data-concierge-token", conciergeToken);
+      script.onload = () => {
+        status.textContent = "Capacity widget script loaded.";
+      };
+      script.onerror = () => {
+        status.textContent = "The widget script could not load. Check the concierge configuration.";
+      };
+      document.body.appendChild(script);
+    }
+  </script>
+</body>
+</html>

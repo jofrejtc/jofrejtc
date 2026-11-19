@@ -4,6 +4,10 @@ Estudiante de último curso de Ingeniería en Organización de las TIC en La Sal
 
 [LinkedIn](https://www.linkedin.com/in/jofre-tura-centelles-13140b2b7/)
 
+## IA generativa
+
+- [Pediatric RAG Assistant](https://github.com/jofrejtc/jofrejtc/tree/main/projects/pediatric-rag-assistant) — Prototipo académico en Capacity con una base de conocimiento propia, flujo guiado, pruebas en español y evaluación cualitativa de prompts. Incluye documentación y capturas del proyecto.
+
 ## Sistemas embebidos
 
 - [LsFarm · Fase B](https://github.com/jofrejtc/lsfarm-phase-b) — Simulador de granja en C para PIC18F4321 con dos canales serie, persistencia en EEPROM y lectura de sensores.
@@ -16,4 +20,4 @@ Estudiante de último curso de Ingeniería en Organización de las TIC en La Sal
 - [Coffee Clicker · Java y MySQL](https://github.com/jofrejtc/coffee-clicker-java-idle-game) — Implementé el inicio y el cierre de sesión, conecté las vistas y los controladores de usuario con la base de datos y desarrollé la lógica de mejora de los generadores. También refactoricé `GameManager`.
 - [Crypto Wallet iOS · Swift y UIKit](https://github.com/jofrejtc/crypto-wallet-ios) — Implementé los modelos `Decodable` para interpretar las respuestas JSON de CoinRanking.
 
-Desarrollé estos proyectos con Guillem Gil y, en las aplicaciones, con otros compañeros cuyos nombres figuran en cada repositorio.
+Los proyectos de sistemas embebidos y aplicaciones los desarrollé con Guillem Gil y, en las aplicaciones, con otros compañeros cuyos nombres figuran en cada repositorio.
